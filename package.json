@@ -1,0 +1,46 @@
+{
+  "name": "coffeescript-jest-preset",
+  "version": "1.0.0",
+  "description": "Jest preset for Coffeescript",
+  "main": "src/index.coffee",
+  "scripts": {
+    "format": "prettier --write .",
+    "prepublishOnly": "coffee src/build.coffee",
+    "gitHook": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcostarodrigo/coffeescript-jest-preset.git"
+  },
+  "keywords": [
+    "jest",
+    "preset",
+    "coffeescript",
+    "coffee"
+  ],
+  "author": "Rodrigo Fernandes da Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fcostarodrigo/coffeescript-jest-preset/issues"
+  },
+  "homepage": "https://github.com/fcostarodrigo/coffeescript-jest-preset#readme",
+  "files": [
+    "dist",
+    "jest-preset.js"
+  ],
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-unknown --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "babel-jest": "^26.6.3",
+    "coffeescript": "^2.5.1"
+  }
+}
