@@ -10,7 +10,7 @@ module.exports =
       .update '\0', 'utf8'
       .update sourcePath
       .update '\0', 'utf8'
-      .update configString
+      .update if typeof configString is 'string' then configString else JSON.stringify configString
       .update '\0', 'utf8'
       .update readFileSync __filename
       .digest 'hex'
